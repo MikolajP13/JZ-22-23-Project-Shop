@@ -1,6 +1,6 @@
 package pl.edu.wszib.mpudelko.shop.product;
 
-public class Product {
+public sealed class Product permits GraphicsCard, Motherboard {
     private String barcode;
     private String productName;
     private String brand;

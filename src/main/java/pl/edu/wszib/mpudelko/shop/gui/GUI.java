@@ -21,8 +21,8 @@ public class GUI {
     private final Authenticator authenticator = Authenticator.getInstance();
     private final LoginValidator loginValidator = LoginValidator.getInstance();
     private final PasswordValidator passwordValidator = PasswordValidator.getInstance();
-    private final String productListLabel = String.format("%-8s%-25s%-15s%-10s%-10s",
-            "Barcode", "Product", "Brand", "Price $", "Quantity");
+    private final String productListLabel = String.format("%-8s%-25s%-15s%-10s%-10s%-25s",
+            "Barcode", "Product", "Brand", "Price $", "Quantity", "Extra info (ram size'/chipset'')");
 
     private GUI() {
     }

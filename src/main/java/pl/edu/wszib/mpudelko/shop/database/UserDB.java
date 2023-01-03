@@ -21,11 +21,9 @@ public class UserDB {
     }
 
     public Optional<User> findByLogin(String userLogin){
-        for (User user : this.users) {
-            if(user.getLogin().equals(userLogin))
-                return Optional.of(user);
-        }
-        return Optional.empty();
+        return this.users.stream()
+                .filter(u->u.getLogin().equals(userLogin))
+                .findFirst();
     }
 
     public void changeUserRole(Optional<User> userBox){
